@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">SOC Detection Response Project Architecture</title>
+  <desc id="desc">Architecture diagram for an open-source SOC detection response project using Wazuh, Sysmon, Suricata, and Atomic Red Team. The diagram shows endpoint telemetry, network telemetry, centralized alerting, analyst workflow, incident reporting, and Wazuh rule tuning.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f9fc; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 16; }
+      .node { fill: #ffffff; stroke: #245b87; stroke-width: 2.4; rx: 14; }
+      .blue { fill: #edf5ff; stroke: #2b6cb0; stroke-width: 2.4; rx: 14; }
+      .green { fill: #eef8f1; stroke: #2f855a; stroke-width: 2.4; rx: 14; }
+      .orange { fill: #fff7ed; stroke: #c05621; stroke-width: 2.4; rx: 14; }
+      .purple { fill: #f5f0ff; stroke: #6b46c1; stroke-width: 2.4; rx: 14; }
+      .red { fill: #fff1f2; stroke: #b83245; stroke-width: 2.4; rx: 14; }
+      .title { font-family: "Segoe UI", Arial, sans-serif; font-size: 38px; font-weight: 800; fill: #0b2545; }
+      .subtitle { font-family: "Segoe UI", Arial, sans-serif; font-size: 22px; fill: #2b6cb0; font-weight: 650; }
+      .section { font-family: "Segoe UI", Arial, sans-serif; font-size: 21px; font-weight: 800; fill: #1e3a5f; }
+      .label { font-family: "Segoe UI", Arial, sans-serif; font-size: 25px; font-weight: 750; fill: #0f172a; }
+      .sub { font-family: "Segoe UI", Arial, sans-serif; font-size: 19px; fill: #334155; }
+      .small { font-family: "Segoe UI", Arial, sans-serif; font-size: 16px; fill: #475569; }
+      .tiny { font-family: "Segoe UI", Arial, sans-serif; font-size: 14px; fill: #64748b; }
+      .arrow { stroke: #334155; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .arrow-blue { stroke: #2b6cb0; stroke-width: 3; fill: none; marker-end: url(#arrowhead-blue); }
+      .arrow-green { stroke: #2f855a; stroke-width: 3; fill: none; marker-end: url(#arrowhead-green); }
+      .arrow-dashed { stroke: #64748b; stroke-width: 3; fill: none; stroke-dasharray: 10 8; marker-end: url(#arrowhead-muted); }
+      .feedback { stroke: #7c3aed; stroke-width: 3; fill: none; stroke-dasharray: 8 7; marker-end: url(#arrowhead-purple); }
+      .badge { fill: #e2e8f0; rx: 9; }
+      .badge-text { font-family: "Segoe UI", Arial, sans-serif; font-size: 15px; font-weight: 750; fill: #334155; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#334155"/></marker>
+    <marker id="arrowhead-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2b6cb0"/></marker>
+    <marker id="arrowhead-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#2f855a"/></marker>
+    <marker id="arrowhead-muted" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#64748b"/></marker>
+    <marker id="arrowhead-purple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#7c3aed"/></marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1000"/>
+
+  <text class="title" x="78" y="78">SOC Detection Response Project</text>
+  <text class="subtitle" x="80" y="115">Wazuh | Sysmon | Suricata | Atomic Red Team</text>
+
+  <rect class="panel" x="60" y="150" width="425" height="705"/>
+  <text class="section" x="90" y="193">Telemetry and Test Sources</text>
+
+  <rect class="blue" x="95" y="230" width="335" height="128"/>
+  <text class="label" x="125" y="272">Windows Endpoint</text>
+  <text class="sub" x="125" y="306">Wazuh Agent + Sysmon</text>
+  <text class="small" x="125" y="328">Process, command line, DNS,</text>
+  <text class="small" x="125" y="348">registry, network connections</text>
+
+  <rect class="orange" x="95" y="414" width="335" height="126"/>
+  <text class="label" x="125" y="456">Atomic Red Team</text>
+  <text class="sub" x="125" y="490">Controlled ATT&amp;CK test activity</text>
+  <text class="small" x="125" y="512">PowerShell execution, persistence,</text>
+  <text class="small" x="125" y="532">file modification scenarios</text>
+
+  <rect class="green" x="95" y="598" width="335" height="128"/>
+  <text class="label" x="125" y="640">Network Sensor</text>
+  <text class="sub" x="125" y="674">Suricata + Wazuh Agent</text>
+  <text class="small" x="125" y="696">EVE JSON: alerts, DNS, HTTP,</text>
+  <text class="small" x="125" y="716">TLS, flows</text>
+
+  <rect class="panel" x="590" y="150" width="430" height="705"/>
+  <text class="section" x="620" y="193">Wazuh SIEM / XDR</text>
+
+  <rect class="node" x="640" y="250" width="330" height="118"/>
+  <text class="label" x="675" y="292">Wazuh Manager</text>
+  <text class="sub" x="675" y="326">Agent data collection</text>
+  <text class="small" x="675" y="354">Decoding, rules, alert generation</text>
+
+  <rect class="node" x="640" y="432" width="330" height="118"/>
+  <text class="label" x="675" y="474">Wazuh Indexer</text>
+  <text class="sub" x="675" y="508">Searchable event store</text>
+  <text class="small" x="675" y="536">Host and network evidence</text>
+
+  <rect class="node" x="640" y="614" width="330" height="118"/>
+  <text class="label" x="675" y="656">Wazuh Dashboard</text>
+  <text class="sub" x="675" y="690">Monitoring and triage</text>
+  <text class="small" x="675" y="718">Alerts, MITRE, dashboards, FIM</text>
+
+  <rect class="panel" x="1130" y="150" width="410" height="705"/>
+  <text class="section" x="1160" y="193">SOC Analyst Workflow</text>
+
+  <rect class="purple" x="1175" y="230" width="310" height="88"/>
+  <text class="label" x="1210" y="268">Alert Triage</text>
+  <text class="small" x="1210" y="297">Severity, source, affected host</text>
+
+  <rect class="purple" x="1175" y="352" width="310" height="88"/>
+  <text class="label" x="1210" y="390">Investigation</text>
+  <text class="small" x="1210" y="419">Host + network evidence timeline</text>
+
+  <rect class="red" x="1175" y="474" width="310" height="88"/>
+  <text class="label" x="1210" y="512">Response Notes</text>
+  <text class="small" x="1210" y="541">Containment and recovery advice</text>
+
+  <rect class="purple" x="1175" y="596" width="310" height="88"/>
+  <text class="label" x="1210" y="634">Incident Report</text>
+  <text class="small" x="1210" y="663">Timeline, impact, lessons learned</text>
+
+  <rect class="purple" x="1175" y="718" width="310" height="88"/>
+  <text class="label" x="1210" y="756">Wazuh Rule Tuning</text>
+  <text class="small" x="1210" y="785">Reduce noise, improve fidelity</text>
+
+  <path class="arrow-blue" d="M430 294 C510 294, 560 300, 640 309"/>
+  <path class="arrow-dashed" d="M262 414 L262 370"/>
+  <path class="arrow-green" d="M430 662 C510 662, 560 660, 640 673"/>
+
+  <path class="arrow" d="M805 368 L805 432"/>
+  <path class="arrow" d="M805 550 L805 614"/>
+
+  <path class="arrow-blue" d="M970 673 C1050 673, 1090 274, 1175 274"/>
+  <path class="arrow" d="M1330 318 L1330 352"/>
+  <path class="arrow" d="M1330 440 L1330 474"/>
+  <path class="arrow" d="M1330 562 L1330 596"/>
+  <path class="arrow" d="M1330 684 L1330 718"/>
+
+  <path class="feedback" d="M1175 762 C1055 875, 740 890, 805 732"/>
+  <rect class="badge" x="675" y="795" width="260" height="34"/>
+  <text class="badge-text" x="694" y="818">Custom Wazuh Rules Only</text>
+  <path class="feedback" d="M1175 762 C1082 831, 1000 825, 935 812"/>
+
+  <rect class="panel" x="60" y="885" width="1480" height="70"/>
+  <text class="section" x="90" y="928">Portfolio Outputs</text>
+  <text class="sub" x="285" y="928">Architecture</text>
+  <text class="sub" x="465" y="928">Setup guides</text>
+  <text class="sub" x="640" y="928">Wazuh rules</text>
+  <text class="sub" x="810" y="928">Atomic test notes</text>
+  <text class="sub" x="1040" y="928">Incident reports</text>
+  <text class="sub" x="1260" y="928">Runbooks</text>
+  <text class="sub" x="1395" y="928">Dashboards</text>
+
+  <text class="tiny" x="80" y="975">Scope note: This SOC project does not include Sigma. Detection work is implemented and documented as Wazuh custom rules.</text>
+</svg>

@@ -1,0 +1,36 @@
+# VMware virtual machine files
+*.vmdk
+*.vmx
+*.vmxf
+*.vmsd
+*.vmsn
+*.vmss
+*.vmem
+*.nvram
+*.lck/
+*.log
+
+# Secrets and credentials
+*.key
+*.pem
+*.pfx
+*.p12
+*password*
+*secret*
+*token*
+.env
+
+# Raw evidence files that should be sanitized before publishing
+*.pcap
+*.pcapng
+*.evtx
+*.etl
+*.raw
+raw-logs/
+raw-evidence/
+
+# OS clutter
+Thumbs.db
+Desktop.ini
+.DS_Store
+
