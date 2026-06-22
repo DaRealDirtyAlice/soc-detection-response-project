@@ -38,13 +38,17 @@ Planned IP layout:
 
 ## Current Build Status
 
-- VMware project networks created
+- VMware project networks created and segmented with VMnet8 NAT and VMnet2 project network
 - Ubuntu Server systems installed for Wazuh Server and Network Sensor
-- Static project IPs configured on both Ubuntu servers
-- Windows Endpoint installed
-- Sysmon installed and producing events
-- Atomic Red Team installed
-- Wazuh Agent installed on Windows Endpoint
+- Static project IPs configured on the project network
+- Windows Endpoint installed with Sysmon, Wazuh Agent, and Atomic Red Team
+- Wazuh Server installed for centralized monitoring
+- Network Sensor installed with Suricata and Wazuh Agent
+- Initial Windows Sysmon telemetry validated in Wazuh Threat Hunting
+
+Latest progress update:
+
+- [2026-06-22 core tooling deployment](progress-updates/2026-06-22-core-tooling-deployment.md)
 
 ## Planned Detection Scenarios
 
@@ -77,6 +81,7 @@ soc-detection-response-project/
   README.md
   architecture/
   setup-guides/
+  progress-updates/
   detections/
     wazuh-rules/
   atomic-tests/
