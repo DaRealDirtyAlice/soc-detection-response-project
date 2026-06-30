@@ -45,10 +45,18 @@ Planned IP layout:
 - Wazuh Server installed for centralized monitoring
 - Network Sensor installed with Suricata and Wazuh Agent
 - Initial Windows Sysmon telemetry validated in Wazuh Threat Hunting
+- First endpoint detection case documented from PowerShell/Sysmon activity
 
 Latest progress update:
 
+- [2026-06-30 first endpoint detection validation](progress-updates/2026-06-30-first-endpoint-detection-validation.md)
 - [2026-06-22 core tooling deployment](progress-updates/2026-06-22-core-tooling-deployment.md)
+
+## Detection Case Studies
+
+| Case | Technique / Focus | Data Sources | Status |
+|---|---|---|---|
+| [001 - PowerShell File Creation Alert](incident-reports/001-powershell-file-creation.md) | PowerShell activity / ATT&CK T1059.001 | Sysmon, Wazuh Agent, Wazuh Threat Hunting | Validated |
 
 ## Planned Detection Scenarios
 
