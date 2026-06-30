@@ -59,7 +59,7 @@ Latest progress update:
 | Case | Technique / Focus | Data Sources | Status |
 |---|---|---|---|
 | [001 - PowerShell File Creation Alert](incident-reports/001-powershell-file-creation.md) | PowerShell activity / ATT&CK T1059.001 | Sysmon, Microsoft Defender, Wazuh Agent, Wazuh Threat Hunting | Enriched |
-| [002 - PowerShell Spawned Instance and Suspicious File Drop](incident-reports/002-powershell-spawned-instance-file-drop.md) | T1059.001 PowerShell, T1105 Ingress Tool Transfer | Sysmon, Wazuh Agent, Wazuh Threat Hunting | Validated |
+| [002 - PowerShell Spawned Instance and Suspicious File Drop](incident-reports/002-powershell-spawned-instance-file-drop.md) | T1059.001 PowerShell, T1105 Ingress Tool Transfer | Sysmon, Wazuh Agent, Wazuh Threat Hunting | Enriched |
 
 Supporting guide:
 

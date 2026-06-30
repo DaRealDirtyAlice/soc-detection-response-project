@@ -17,6 +17,8 @@ Two related Wazuh alerts were captured from `win-endpoint`:
 | `92027` | 4 | `Powershell process spawned powershell instance` | `T1059.001` PowerShell |
 | `92213` | 15 | `Executable file dropped in folder commonly used by malware` | `T1105` Ingress Tool Transfer |
 
+The case was enriched with full event fields for command line, parent process, file path, hashes, user context, process ID, and process GUID. Sysmon Event ID `1` and Event ID `11` were linked by matching process context.
+
 ## Validated Detection Path
 
 ```text
@@ -34,7 +36,5 @@ The alerts provide clear SOC triage pivots: command line, parent process, file p
 
 ## Next Steps
 
-- Extract full command-line and parent-process fields for rule `92027`.
-- Extract file path and hash details for rule `92213`.
 - Compare the activity with Defender events from the same time window.
 - Continue building repeatable endpoint detection cases before returning to Suricata/Wazuh network telemetry tuning.
