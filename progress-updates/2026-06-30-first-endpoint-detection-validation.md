@@ -30,6 +30,7 @@ Wazuh generated a PowerShell-related alert from Sysmon telemetry:
 ## Documentation Added
 
 - [001 - PowerShell File Creation Alert](../incident-reports/001-powershell-file-creation.md)
+- [Windows Defender log collection setup](../setup-guides/02-windows-defender-log-collection.md)
 
 ## Next Steps
 

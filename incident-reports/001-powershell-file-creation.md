@@ -33,6 +33,12 @@ This case documents the validated endpoint telemetry path rather than claiming f
 | Sysmon event ID | `11` |
 | Event type | File created |
 
+## Evidence Screenshot
+
+The following screenshot shows the Wazuh Threat Hunting event list for `win-endpoint`, including Wazuh rule `92205`.
+
+![Wazuh PowerShell rule 92205 alert](../screenshots/wazuh-win-endpoint-powershell-rule-92205.png)
+
 ## Key Event Fields
 
 Observed fields from Wazuh event details:
@@ -68,6 +74,14 @@ agent.name: "win-endpoint" AND mimikatz
 agent.name: "win-endpoint" AND "Invoke-AtomicTest"
 ```
 
+## Initial Timeline
+
+| Time | Event | Evidence |
+|---|---|---|
+| 17:48 | PowerShell-related Sysmon activity observed on `win-endpoint` | Wazuh rule `92205` |
+| 17:48 | Wazuh alert generated for suspicious PowerShell file creation | Wazuh Threat Hunting |
+| Same test window | Microsoft Defender blocked higher-risk Atomic Red Team activity | Windows Defender local protection notification/history |
+
 ## Analyst Interpretation
 
 The alert shows `powershell.exe` creating a script file under a Windows system path. This behavior is security-relevant because PowerShell is commonly used for script execution, payload staging, and post-exploitation automation.
@@ -90,6 +104,20 @@ This alert is useful for SOC triage because it provides:
 
 It also shows why surrounding-event review is important. A file creation alert alone does not prove malicious execution, but it gives analysts a pivot point for process creation, Defender, parent process, and nearby timeline analysis.
 
+## Defender Log Enrichment Plan
+
+The next enrichment step is to forward Microsoft Defender Operational logs into Wazuh so Defender prevention events can be reviewed alongside Sysmon events.
+
+Implementation guide:
+
+- [Windows Defender log collection setup](../setup-guides/02-windows-defender-log-collection.md)
+
+Expected result after configuration:
+
+```text
+PowerShell activity + Defender prevention evidence + Sysmon file creation telemetry
+```
+
 ## Recommended Follow-up
 
 - Review nearby Sysmon Event ID 1 process creation events.
@@ -106,9 +134,9 @@ Validated:
 - Sysmon telemetry is being generated on `win-endpoint`.
 - Wazuh Agent is forwarding endpoint events.
 - Wazuh Threat Hunting displays PowerShell-related Sysmon alerts.
+- Screenshot evidence has been added for Wazuh rule `92205`.
 
 Needs follow-up:
 
 - Add Windows Defender Operational log collection to Wazuh if Defender alerts should be centrally searchable.
-- Capture and link a sanitized screenshot of the Wazuh alert.
 - Review surrounding documents for process creation context.

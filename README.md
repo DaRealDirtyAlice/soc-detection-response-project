@@ -58,6 +58,10 @@ Latest progress update:
 |---|---|---|---|
 | [001 - PowerShell File Creation Alert](incident-reports/001-powershell-file-creation.md) | PowerShell activity / ATT&CK T1059.001 | Sysmon, Wazuh Agent, Wazuh Threat Hunting | Validated |
 
+Supporting guide:
+
+- [Windows Defender log collection setup](setup-guides/02-windows-defender-log-collection.md)
+
 ## Planned Detection Scenarios
 
 | Scenario | Data Sources | Purpose |
