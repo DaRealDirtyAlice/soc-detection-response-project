@@ -46,9 +46,11 @@ Planned IP layout:
 - Network Sensor installed with Suricata and Wazuh Agent
 - Initial Windows Sysmon telemetry validated in Wazuh Threat Hunting
 - First endpoint detection case documented from PowerShell, Sysmon, and Microsoft Defender activity
+- Second endpoint detection case documented from nested PowerShell execution and suspicious file drop evidence
 
 Latest progress update:
 
+- [2026-06-30 second endpoint detection case](progress-updates/2026-06-30-second-endpoint-detection-case.md)
 - [2026-06-30 first endpoint detection validation](progress-updates/2026-06-30-first-endpoint-detection-validation.md)
 - [2026-06-22 core tooling deployment](progress-updates/2026-06-22-core-tooling-deployment.md)
 
@@ -57,6 +59,7 @@ Latest progress update:
 | Case | Technique / Focus | Data Sources | Status |
 |---|---|---|---|
 | [001 - PowerShell File Creation Alert](incident-reports/001-powershell-file-creation.md) | PowerShell activity / ATT&CK T1059.001 | Sysmon, Microsoft Defender, Wazuh Agent, Wazuh Threat Hunting | Enriched |
+| [002 - PowerShell Spawned Instance and Suspicious File Drop](incident-reports/002-powershell-spawned-instance-file-drop.md) | T1059.001 PowerShell, T1105 Ingress Tool Transfer | Sysmon, Wazuh Agent, Wazuh Threat Hunting | Validated |
 
 Supporting guide:
 
