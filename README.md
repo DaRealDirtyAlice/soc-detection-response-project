@@ -49,9 +49,11 @@ Planned IP layout:
 - Second endpoint detection case documented from nested PowerShell execution and suspicious file drop evidence
 - Network Sensor Suricata telemetry validated in Wazuh Threat Hunting
 - Controlled Suricata IDS alert validated from Windows Endpoint test traffic
+- First endpoint-plus-network correlation timeline documented in Wazuh
 
 Latest progress update:
 
+- [2026-07-06 endpoint and network correlation](progress-updates/2026-07-06-endpoint-network-correlation.md)
 - [2026-07-06 controlled Suricata alert validation](progress-updates/2026-07-06-controlled-suricata-alert-validation.md)
 - [2026-07-03 network sensor Suricata validation](progress-updates/2026-07-03-network-sensor-suricata-validation.md)
 - [2026-06-30 second endpoint detection case](progress-updates/2026-06-30-second-endpoint-detection-case.md)
@@ -66,6 +68,7 @@ Latest progress update:
 | [002 - PowerShell Spawned Instance and Suspicious File Drop](incident-reports/002-powershell-spawned-instance-file-drop.md) | T1059.001 PowerShell, T1105 Ingress Tool Transfer | Sysmon, Wazuh Agent, Wazuh Threat Hunting | Enriched |
 | [003 - Network Sensor Suricata Telemetry Validation](incident-reports/003-network-sensor-suricata-telemetry-validation.md) | Suricata network telemetry validation | Suricata, Wazuh Agent, Wazuh Threat Hunting | Validated |
 | [004 - Controlled Suricata Alert Validation](incident-reports/004-controlled-suricata-alert-validation.md) | Controlled IDS alert validation | Suricata, Wazuh Agent, Wazuh Threat Hunting | Validated |
+| [005 - Endpoint and Network Telemetry Correlation](incident-reports/005-endpoint-network-telemetry-correlation.md) | Endpoint and network alert timeline correlation | Sysmon, Suricata, Wazuh Agent, Wazuh Threat Hunting | Validated |
 
 Supporting guide:
 
