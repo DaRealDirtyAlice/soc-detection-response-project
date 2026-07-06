@@ -48,9 +48,11 @@ Planned IP layout:
 - First endpoint detection case documented from PowerShell, Sysmon, and Microsoft Defender activity
 - Second endpoint detection case documented from nested PowerShell execution and suspicious file drop evidence
 - Network Sensor Suricata telemetry validated in Wazuh Threat Hunting
+- Controlled Suricata IDS alert validated from Windows Endpoint test traffic
 
 Latest progress update:
 
+- [2026-07-06 controlled Suricata alert validation](progress-updates/2026-07-06-controlled-suricata-alert-validation.md)
 - [2026-07-03 network sensor Suricata validation](progress-updates/2026-07-03-network-sensor-suricata-validation.md)
 - [2026-06-30 second endpoint detection case](progress-updates/2026-06-30-second-endpoint-detection-case.md)
 - [2026-06-30 first endpoint detection validation](progress-updates/2026-06-30-first-endpoint-detection-validation.md)
@@ -63,6 +65,7 @@ Latest progress update:
 | [001 - PowerShell File Creation Alert](incident-reports/001-powershell-file-creation.md) | PowerShell activity / ATT&CK T1059.001 | Sysmon, Microsoft Defender, Wazuh Agent, Wazuh Threat Hunting | Enriched |
 | [002 - PowerShell Spawned Instance and Suspicious File Drop](incident-reports/002-powershell-spawned-instance-file-drop.md) | T1059.001 PowerShell, T1105 Ingress Tool Transfer | Sysmon, Wazuh Agent, Wazuh Threat Hunting | Enriched |
 | [003 - Network Sensor Suricata Telemetry Validation](incident-reports/003-network-sensor-suricata-telemetry-validation.md) | Suricata network telemetry validation | Suricata, Wazuh Agent, Wazuh Threat Hunting | Validated |
+| [004 - Controlled Suricata Alert Validation](incident-reports/004-controlled-suricata-alert-validation.md) | Controlled IDS alert validation | Suricata, Wazuh Agent, Wazuh Threat Hunting | Validated |
 
 Supporting guide:
 
