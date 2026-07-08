@@ -50,6 +50,7 @@ Planned IP layout:
 - Network Sensor Suricata telemetry validated in Wazuh Threat Hunting
 - Controlled Suricata IDS alert validated from Windows Endpoint test traffic
 - First endpoint-plus-network correlation timeline documented in Wazuh
+- SOC triage runbook created for endpoint and network alert handling
 
 Latest progress update:
 
@@ -73,6 +74,10 @@ Latest progress update:
 Supporting guide:
 
 - [Windows Defender log collection setup](setup-guides/02-windows-defender-log-collection.md)
+
+## Runbooks
+
+- [006 - SOC Triage Runbook for Endpoint and Network Alerts](runbooks/006-soc-triage-runbook-endpoint-network-alerts.md)
 
 ## Planned Detection Scenarios
 
