@@ -1,0 +1,15 @@
+<!--
+  Case 007 custom Wazuh rule.
+  Purpose: Detect PowerShell process creation with ExecutionPolicy Bypass.
+  Source: Sysmon Event ID 1 forwarded from win-endpoint through Wazuh Agent.
+-->
+<rule id="100101" level="10">
+  <if_group>sysmon_event1</if_group>
+  <field name="win.eventdata.image" type="pcre2">(?i)powershell\.exe$</field>
+  <field name="win.eventdata.commandLine" type="pcre2">(?i).*ExecutionPolicy.*Bypass.*</field>
+  <description>Custom detection: PowerShell executed with ExecutionPolicy Bypass</description>
+  <mitre>
+    <id>T1059.001</id>
+  </mitre>
+  <group>custom_detection,powershell,sysmon,windows,</group>
+</rule>

@@ -51,9 +51,11 @@ Planned IP layout:
 - Controlled Suricata IDS alert validated from Windows Endpoint test traffic
 - First endpoint-plus-network correlation timeline documented in Wazuh
 - SOC triage runbook created for endpoint and network alert handling
+- First custom Wazuh detection rule created and validated for PowerShell `ExecutionPolicy Bypass`
 
 Latest progress update:
 
+- [2026-07-08 custom Wazuh rule validation](progress-updates/2026-07-08-custom-wazuh-rule-validation.md)
 - [2026-07-06 endpoint and network correlation](progress-updates/2026-07-06-endpoint-network-correlation.md)
 - [2026-07-06 controlled Suricata alert validation](progress-updates/2026-07-06-controlled-suricata-alert-validation.md)
 - [2026-07-03 network sensor Suricata validation](progress-updates/2026-07-03-network-sensor-suricata-validation.md)
@@ -70,6 +72,11 @@ Latest progress update:
 | [003 - Network Sensor Suricata Telemetry Validation](incident-reports/003-network-sensor-suricata-telemetry-validation.md) | Suricata network telemetry validation | Suricata, Wazuh Agent, Wazuh Threat Hunting | Validated |
 | [004 - Controlled Suricata Alert Validation](incident-reports/004-controlled-suricata-alert-validation.md) | Controlled IDS alert validation | Suricata, Wazuh Agent, Wazuh Threat Hunting | Validated |
 | [005 - Endpoint and Network Telemetry Correlation](incident-reports/005-endpoint-network-telemetry-correlation.md) | Endpoint and network alert timeline correlation | Sysmon, Suricata, Wazuh Agent, Wazuh Threat Hunting | Validated |
+| [007 - Custom Wazuh Rule for PowerShell ExecutionPolicy Bypass](incident-reports/007-custom-wazuh-rule-powershell-executionpolicy-bypass.md) | T1059.001 PowerShell detection tuning | Sysmon, Wazuh custom rule, Wazuh Threat Hunting | Validated |
+
+## Detection Rules
+
+- [Wazuh custom rule 100101 - PowerShell ExecutionPolicy Bypass](detections/wazuh-rules/100101-powershell-executionpolicy-bypass.xml)
 
 Supporting guide:
 
