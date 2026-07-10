@@ -54,9 +54,11 @@ Planned IP layout:
 - First custom Wazuh detection rule created and validated for PowerShell `ExecutionPolicy Bypass`
 - Manual response workflow validated for suspicious PowerShell alert cleanup
 - False positive review and detection tuning notes documented for endpoint and network alerts
+- SOC dashboard and reporting pack documented for endpoint, network sensor, and custom detection views
 
 Latest progress update:
 
+- [2026-07-10 SOC dashboard reporting pack](progress-updates/2026-07-10-soc-dashboard-reporting-pack.md)
 - [2026-07-10 false positive review and detection tuning](progress-updates/2026-07-10-false-positive-review-detection-tuning.md)
 - [2026-07-10 manual response workflow validation](progress-updates/2026-07-10-manual-response-workflow.md)
 - [2026-07-08 custom Wazuh rule validation](progress-updates/2026-07-08-custom-wazuh-rule-validation.md)
@@ -79,6 +81,7 @@ Latest progress update:
 | [007 - Custom Wazuh Rule for PowerShell ExecutionPolicy Bypass](incident-reports/007-custom-wazuh-rule-powershell-executionpolicy-bypass.md) | T1059.001 PowerShell detection tuning | Sysmon, Wazuh custom rule, Wazuh Threat Hunting | Validated |
 | [008 - Manual Response Workflow for Suspicious PowerShell Alert](incident-reports/008-manual-response-workflow-powershell-alert.md) | Manual response and artifact cleanup after alert triage | Wazuh, Sysmon, Windows PowerShell, Wazuh Threat Hunting | Validated |
 | [009 - False Positive Review and Detection Tuning Notes](incident-reports/009-false-positive-review-and-detection-tuning-notes.md) | Alert quality review and tuning recommendations | Suricata, Sysmon, Wazuh custom rule, Wazuh Threat Hunting | Validated |
+| [010 - SOC Dashboard and Reporting Pack](incident-reports/010-soc-dashboard-and-reporting-pack.md) | SOC reporting view for endpoint, network, and custom detection coverage | Wazuh dashboard, Sysmon, Suricata, custom Wazuh rule | Validated |
 
 ## Detection Rules
 
