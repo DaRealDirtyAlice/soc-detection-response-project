@@ -55,9 +55,11 @@ Planned IP layout:
 - Manual response workflow validated for suspicious PowerShell alert cleanup
 - False positive review and detection tuning notes documented for endpoint and network alerts
 - SOC dashboard and reporting pack documented for endpoint, network sensor, and custom detection views
+- Final SOC investigation summary and lessons learned completed for the first project version
 
 Latest progress update:
 
+- [2026-07-10 final SOC project summary](progress-updates/2026-07-10-final-soc-project-summary.md)
 - [2026-07-10 SOC dashboard reporting pack](progress-updates/2026-07-10-soc-dashboard-reporting-pack.md)
 - [2026-07-10 false positive review and detection tuning](progress-updates/2026-07-10-false-positive-review-detection-tuning.md)
 - [2026-07-10 manual response workflow validation](progress-updates/2026-07-10-manual-response-workflow.md)
@@ -82,6 +84,7 @@ Latest progress update:
 | [008 - Manual Response Workflow for Suspicious PowerShell Alert](incident-reports/008-manual-response-workflow-powershell-alert.md) | Manual response and artifact cleanup after alert triage | Wazuh, Sysmon, Windows PowerShell, Wazuh Threat Hunting | Validated |
 | [009 - False Positive Review and Detection Tuning Notes](incident-reports/009-false-positive-review-and-detection-tuning-notes.md) | Alert quality review and tuning recommendations | Suricata, Sysmon, Wazuh custom rule, Wazuh Threat Hunting | Validated |
 | [010 - SOC Dashboard and Reporting Pack](incident-reports/010-soc-dashboard-and-reporting-pack.md) | SOC reporting view for endpoint, network, and custom detection coverage | Wazuh dashboard, Sysmon, Suricata, custom Wazuh rule | Validated |
+| [011 - Final SOC Investigation Summary](incident-reports/011-final-soc-investigation-summary.md) | Final project summary, lessons learned, and portfolio narrative | Wazuh, Sysmon, Suricata, Atomic Red Team, custom Wazuh rule | Complete |
 
 ## Detection Rules
 
@@ -94,6 +97,10 @@ Supporting guide:
 ## Runbooks
 
 - [006 - SOC Triage Runbook for Endpoint and Network Alerts](runbooks/006-soc-triage-runbook-endpoint-network-alerts.md)
+
+## Lessons Learned
+
+- [Final project lessons learned](lessons-learned/final-project-lessons-learned.md)
 
 ## Planned Detection Scenarios
 
