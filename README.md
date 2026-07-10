@@ -52,9 +52,11 @@ Planned IP layout:
 - First endpoint-plus-network correlation timeline documented in Wazuh
 - SOC triage runbook created for endpoint and network alert handling
 - First custom Wazuh detection rule created and validated for PowerShell `ExecutionPolicy Bypass`
+- Manual response workflow validated for suspicious PowerShell alert cleanup
 
 Latest progress update:
 
+- [2026-07-10 manual response workflow validation](progress-updates/2026-07-10-manual-response-workflow.md)
 - [2026-07-08 custom Wazuh rule validation](progress-updates/2026-07-08-custom-wazuh-rule-validation.md)
 - [2026-07-06 endpoint and network correlation](progress-updates/2026-07-06-endpoint-network-correlation.md)
 - [2026-07-06 controlled Suricata alert validation](progress-updates/2026-07-06-controlled-suricata-alert-validation.md)
@@ -73,6 +75,7 @@ Latest progress update:
 | [004 - Controlled Suricata Alert Validation](incident-reports/004-controlled-suricata-alert-validation.md) | Controlled IDS alert validation | Suricata, Wazuh Agent, Wazuh Threat Hunting | Validated |
 | [005 - Endpoint and Network Telemetry Correlation](incident-reports/005-endpoint-network-telemetry-correlation.md) | Endpoint and network alert timeline correlation | Sysmon, Suricata, Wazuh Agent, Wazuh Threat Hunting | Validated |
 | [007 - Custom Wazuh Rule for PowerShell ExecutionPolicy Bypass](incident-reports/007-custom-wazuh-rule-powershell-executionpolicy-bypass.md) | T1059.001 PowerShell detection tuning | Sysmon, Wazuh custom rule, Wazuh Threat Hunting | Validated |
+| [008 - Manual Response Workflow for Suspicious PowerShell Alert](incident-reports/008-manual-response-workflow-powershell-alert.md) | Manual response and artifact cleanup after alert triage | Wazuh, Sysmon, Windows PowerShell, Wazuh Threat Hunting | Validated |
 
 ## Detection Rules
 
