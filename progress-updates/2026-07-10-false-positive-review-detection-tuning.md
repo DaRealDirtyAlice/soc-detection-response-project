@@ -15,12 +15,21 @@ Documented Case 009 for false positive review and detection tuning. This update 
 
 ## Evidence Added
 
-- `screenshots/wazuh-case009-network-microsoft-connection-alert-fields.png`
-- `screenshots/wazuh-case009-network-microsoft-connection-flow-fields.png`
-- `screenshots/wazuh-case009-network-microsoft-connection-rule-fields.png`
-- `screenshots/wazuh-case009-endpoint-custom-powershell-commandline.png`
-- `screenshots/wazuh-case009-endpoint-custom-powershell-process-fields.png`
-- `screenshots/wazuh-case009-endpoint-custom-powershell-rule-fields.png`
+### Network Sensor - Microsoft Connection Test
+
+![Network Microsoft Connection Test alert fields](../screenshots/wazuh-case009-network-microsoft-connection-alert-fields.png)
+
+![Network Microsoft Connection Test flow fields](../screenshots/wazuh-case009-network-microsoft-connection-flow-fields.png)
+
+![Network Microsoft Connection Test rule fields](../screenshots/wazuh-case009-network-microsoft-connection-rule-fields.png)
+
+### Endpoint - Custom PowerShell Detection
+
+![Endpoint custom PowerShell command line](../screenshots/wazuh-case009-endpoint-custom-powershell-commandline.png)
+
+![Endpoint custom PowerShell process fields](../screenshots/wazuh-case009-endpoint-custom-powershell-process-fields.png)
+
+![Endpoint custom PowerShell rule fields](../screenshots/wazuh-case009-endpoint-custom-powershell-rule-fields.png)
 
 ## Result
 
